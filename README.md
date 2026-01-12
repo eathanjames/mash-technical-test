@@ -3,6 +3,10 @@ Mash Game technical test for Vue/Typescript WebApp
 
 Game should run using npm run dev after installing.
 
+Tools used:
+Webstorm IDE
+Made use of Claude.AI for some debugging and validating code.
+
 1. What additional features or improvements could be added to enhance the game experience?
       Adding in better navigation - back button to return to previous stage without having to restart the entire game.
       
