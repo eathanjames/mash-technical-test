@@ -5,6 +5,7 @@ Game should run using npm run dev after installing.
 
 Tools used:
 Webstorm IDE
+
 Made use of Claude.AI for some debugging and validating code.
 
 1. What additional features or improvements could be added to enhance the game experience?
@@ -26,9 +27,11 @@ Made use of Claude.AI for some debugging and validating code.
 
 
 3. What infrastructure would be required to support AI-enhanced functionality?
-      I would have a service specifically set up as the integration into the AI API of choice, in C# I would have this as a class library within the AI Service to ensure if we wanted to utilise multiple AI connections or switch out one for another we could do without impacting relied upon systems. This system would handle authentication into the API, handling connections into the api, validating results, handling errors/exceptions and any rate limiting logic. This would also need to handle AI usage, alerts when limits are starting to be hit, any ongoing monitoring of the service to check peak times, useages etc. Adding in some level of caching depending on which AI services are required to ensure we aren't increasing costs unnecessarily.
+      I would have a service specifically set up as the integration into the AI API of choice, in C# I would have this as a class library within the AI Service to ensure if we wanted to utilise multiple AI connections or switch out one for another we could do without impacting relied upon systems.
 
-4. How would you ensure that any AI-generated content or recommendations are accurate and appropriate?
+   This system would handle authentication into the API, handling connections into the api, validating results, handling errors/exceptions and any rate limiting logic. This would also need to handle AI usage, alerts when limits are starting to be hit, any ongoing monitoring of the service to check peak times, useages etc. Adding in some level of caching depending on which AI services are required to ensure we aren't increasing costs unnecessarily.
+
+5. How would you ensure that any AI-generated content or recommendations are accurate and appropriate?
       First would be ensuring the prompts are set up with sufficient rules in place eg.
       STRICT RULES:
       - Content must be appropriate for ages 8+
@@ -43,7 +46,7 @@ Made use of Claude.AI for some debugging and validating code.
       
       Storing any data returned to perform human validation and continually improve the agents.
 
-5. If users wanted to save and revisit their previous game results, how would you design this feature?
+6. If users wanted to save and revisit their previous game results, how would you design this feature?
       Easiest solution would be local storage saving some of the game state to a json string.
       Eg, { Categories: [{ Category: Id, Name, Options[{ Option: Id, Value, Active, CategoryId}]}]}
       Which could be expanded if needed depending on the data within the game. 
